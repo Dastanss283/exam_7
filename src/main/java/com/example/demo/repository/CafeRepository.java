@@ -1,6 +1,6 @@
 package com.example.demo.repository;
 
-import com.example.exam7.model.Cafe;
+import com.example.demo.model.Cafe;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
