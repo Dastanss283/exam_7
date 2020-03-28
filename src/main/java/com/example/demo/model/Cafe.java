@@ -1,11 +1,11 @@
 package com.example.demo.model;
 
-import com.sun.tools.javac.util.List;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
 import java.util.UUID;
 
 @Data
@@ -13,10 +13,10 @@ import java.util.UUID;
 public class Cafe {
     @Id
     private String id = UUID.randomUUID().toString();
-    private String title;
-    private String subscription;
-    private String dish;
+    private String nameCafe;
+    private String description;
     @DBRef
-    private List<Client> clientList;
+    private java.util.List<Food> foods=new ArrayList<>();
+
 
 }
