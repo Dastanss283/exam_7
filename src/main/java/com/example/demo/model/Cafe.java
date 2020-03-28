@@ -6,11 +6,13 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.UUID;
+
 @Data
 @Document(collection = "cafe")
 public class Cafe {
     @Id
-    private String id;
+    private String id = UUID.randomUUID().toString();
     private String title;
     private String subscription;
     private String dish;
